@@ -1,0 +1,12 @@
+<h3>{{ project.name }} >> </h3>
+
+<select 
+  name="activeChar" id="" 
+  [(ngModel)]="activeChar">
+  <option name="activeChar" 
+    *ngFor="let character of charList" 
+    [value]="character.id">{{character.name}}
+  </option>
+</select>
+
+<p>{{ activeChar }}</p>
