@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import * as Parse from 'parse';
-import ParseData from '../data/server_data.json';
+import Parse from 'parse';
 import { Character } from '../data/character';
 import { Observable, of } from 'rxjs';
 
@@ -13,8 +12,6 @@ export class CharacterService {
   characterList$: Observable<Character[]> = of(this.CharacterList)
 
   constructor() {
-    Parse.initialize(ParseData.appID, ParseData.jsKey);
-    (Parse as any).serverURL = ParseData.parseURL;
     // this.loadCharacters();
   }
 

@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
-import * as Parse from 'parse';
-import ParseData from '../data/server_data.json';
+import Parse from 'parse'
 import { storyEvent, cellStatus } from '../data/char-tables';
-import { Observable, filter, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
-import { Character } from '../data/character';
 
 @Injectable({
   providedIn: 'root'
@@ -22,10 +20,7 @@ export class TableDataService {
   events$: Observable<storyEvent[]> = of(this.events)
 
   constructor() {
-    Parse.initialize(ParseData.appID, ParseData.jsKey);
-    (Parse as any).serverURL = ParseData.parseURL;
     this.syncEvents()
-
 }
 
   saveAll() {

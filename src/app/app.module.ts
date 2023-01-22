@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import Parse from 'parse'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +15,7 @@ import { MAINUIModule } from './interface/main-ui.module';
 @NgModule({
   declarations: [
     AppComponent,
-    RichTextEditorComponent
+    RichTextEditorComponent,
   ],
   imports: [
     BrowserModule,
