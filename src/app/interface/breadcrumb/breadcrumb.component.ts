@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Character } from 'src/app/data-structures/character';
+import { Character } from 'src/app/data/character';
+import { CharacterService } from '../../characters/character.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-breadcrumb',
@@ -9,28 +11,22 @@ import { Character } from 'src/app/data-structures/character';
 
 export class BreadcrumbComponent implements OnInit {
 
-
-
-  public activeChar: any = "hello";
+  public activeChar: any = "";
 
   project: any = {
     name: "Chronicles of the Endri",
   }
 
-  public charList: Character[] = [{ 
-    "id":'asdf123', 
-    "name":'Mica',
-    "age": 25,
-    description: "",
+  public charList$!: Observable<Character[]>;
 
-   }];
-
-  constructor() { }
+  constructor(private characterService: CharacterService) {
+    this.charList$ = characterService.characterList$;
+   }
 
   ngOnInit(): void {
+
   }
 
   setActiveChar(charID: string) { this.activeChar = charID }
-
 }
 

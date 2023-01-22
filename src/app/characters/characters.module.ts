@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Character } from '../data-structures/character';
+import { Character } from '../data/character';
 
 @NgModule({
   declarations: [

@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { NavigationComponent } from './navigation/navigation.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { FormsModule } from '@angular/forms';
+import { MainMenuComponent } from './main-menu/menu.component';
 
 @NgModule({
   declarations: [
     NavigationComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    MainMenuComponent
   ],
   imports: [
     CommonModule,

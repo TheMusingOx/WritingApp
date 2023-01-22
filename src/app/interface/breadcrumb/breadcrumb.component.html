@@ -1,12 +1,13 @@
-<h3>{{ project.name }} >> </h3>
+<div id="breadcrumb">
+  <h3 class="bc-text">{{ project.name }} >> </h3>
 
-<select 
-  name="activeChar" id="" 
-  [(ngModel)]="activeChar">
-  <option name="activeChar" 
-    *ngFor="let character of charList" 
-    [value]="character.id">{{character.name}}
-  </option>
-</select>
-
-<p>{{ activeChar }}</p>
+  <select id="bc-character"
+    name="activeChar" id="" 
+    [(ngModel)]="activeChar">
+    <option class="bc-text" 
+      name="activeChar" 
+      *ngFor="let character of charList$ | async" 
+      [value]="character.id">{{character.name}}
+    </option>
+  </select>
+</div>
