@@ -1,0 +1,61 @@
+.table {
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  grid-template-rows: auto;
+  // height: 500px;
+  // padding: 15px;
+}
+
+.table-cols {
+  display: grid;
+  grid-template-columns: repeat(1, auto auto);
+}
+
+.select-add {
+  // height: 200px;
+  min-width: 20px;
+  background-color: rgb(35, 69, 70);
+  position: relative;
+  // pointer-events: auto;
+}
+
+.add-event-btn {
+  // display: none;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 30px;
+  height: 40px;
+  margin: auto;
+  z-index: 10;
+  border-radius: 15px;
+}
+
+.select-add:hover + .add-event-btn {
+  display: block;
+  background-color: blue;
+}
+
+.event-header {
+  border: solid white 2px;
+  color: orange;
+  // height: 200px;
+  background-color: whitesmoke;
+  position: relative;
+}
+
+.cell {
+  width: 150px;
+  height: 200px;
+  background-color: yellowgreen;
+  // position: absolute;
+  // top: 0px;
+  // left: 0x;
+  // width: 0px;
+  // height: 0px;
+  // margin: auto;
+}

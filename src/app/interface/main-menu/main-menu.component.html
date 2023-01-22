@@ -1,1 +1,10 @@
-<p>menu works!</p>
+<button (click)="toggleMenu()"> < </button>
+<div id="main-nav" *ngIf="menuToggle">
+  <ul>
+    <li class="nav-item" (click)="toggleMenu()"><a routerLink="/characters" 
+      routerLinkActive="active" 
+      ariaCurrentWhenActive="page">Characters</a></li>
+    <li class="nav-item" (click)="toggleMenu()"><a routerLink="/manuscript">Manuscript</a></li>
+    <li class="nav-item" (click)="toggleMenu()"><a routerLink="/main-tables">Main Tables</a></li>
+  </ul>
+</div>

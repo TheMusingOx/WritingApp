@@ -1,0 +1,19 @@
+#main-nav {
+  position: absolute;
+  height: auto;
+  width: fit-content;
+  padding: 10px;
+  border: solid black 1px;
+  border-left:0px;
+  border-radius: 0px 15px 15px 0;
+  background-color: lightyellow;
+  // transition: width cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.nav-item {
+  background-color: lightblue;
+  border: solid 1px black;
+  border-radius: 7px;
+  padding: 3px;
+  margin: 5px;
+}

@@ -1,0 +1,31 @@
+<button class="maximize-btn" (click)="toggleEditMode()">{{editBtn}}</button>
+
+<!-- Try ngSwitch here -->
+<!-- Change the border color depending on its current status -->
+<!-- Add the ability to remove a new event object without having to delete it. -->
+<!-- Add the ability to change the order of events -->
+
+<!-- Minimized View -->
+<div class="container" *ngIf="!e.beingEdited && e.status !=4">
+  <h3 class="title">{{e.name}}</h3>
+  <p>{{e.desc}}</p>
+</div>
+
+<!-- Maximized View -->
+<div class="container-edit" *ngIf="e.beingEdited && e.status != 4 ">
+  <label for="eventTitle">Event Title</label><br>
+  <input name="eventTitle" type="text" (keyup)="setStatus()" [(ngModel)]="e.name"><br>
+  <label for="eventDesc">Description:</label><br>
+  <textarea name="eventDesc" id="" cols="30" rows="10"
+  (keyup)="setStatus()" [(ngModel)]="e.desc"></textarea>
+  <p>{{e.ID}}</p>
+  <button class="delete-btn" (click)="e.status = 4">Delete</button>
+</div>
+
+<!-- Deleted Div -->
+<div class="deleted" *ngIf="e.status == 4">
+  <h3 class="title">{{e.name}}</h3>
+  <h1>Deleted</h1>
+  <button (click)="e.status = 2; e.beingEdited = false" >Restore Event</button>
+</div>
+

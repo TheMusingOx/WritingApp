@@ -12,10 +12,10 @@ export class CharacterService {
   CharacterList: Character[] = [];
   characterList$: Observable<Character[]> = of(this.CharacterList)
 
-  constructor() { 
-    Parse.initialize(ParseData.appID, ParseData.jsKey); 
+  constructor() {
+    Parse.initialize(ParseData.appID, ParseData.jsKey);
     (Parse as any).serverURL = ParseData.parseURL;
-    this.loadCharacters();
+    // this.loadCharacters();
   }
 
   async loadCharacters() {
@@ -40,7 +40,7 @@ export class CharacterService {
   }
 
   refreshCharList() {
-    this.CharacterList = []; 
+    this.CharacterList = [];
     this.loadCharacters();
     alert("Ensure you save your data before refreshing.")
     console.log("refreshing Characters")

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ManuscriptModule } from './manuscript/manuscript.module';
 import { RichTextEditorComponent } from './rich-text-editor/rich-text-editor.component';
 import { CharactersModule } from './characters/characters.module';
-import { EventsStatesModule } from './events-states/events-states.module';
+import { TableStatesModule } from './table-states/table-states.module';
 import { WorldbuildingModule } from './worldbuilding/worldbuilding.module';
 import { QuillModule } from 'ngx-quill';
 import { MAINUIModule } from './interface/main-ui.module';
@@ -21,7 +21,7 @@ import { MAINUIModule } from './interface/main-ui.module';
     AppRoutingModule,
     ManuscriptModule,
     CharactersModule,
-    EventsStatesModule,
+    TableStatesModule,
     WorldbuildingModule,
     MAINUIModule,
     QuillModule,

@@ -1,0 +1,26 @@
+<button class="save-btn" (click)="saveAll() ">Save All Changes</button>
+<div class="table" [ngStyle]="{}" >
+  <div class="select-add">
+    <button class="add-event-btn" (click)="addEvent(0)">+</button>
+  </div>
+  <div *ngFor="let e of events$ | async; let i=index; let f=first" class="table-cols">
+    <div class="event-header" >
+      <app-event-cell  [cellNum]="i" ></app-event-cell>
+      <!-- create a specific draggable element -->
+      <img src="" alt="" draggable="true">
+    </div>
+    <div class="select-add">
+      <button class="add-event-btn" (click)="addEvent(i+1)">+</button>
+    </div>
+    <div class="cell"></div>
+  </div>
+</div>
+
+<!-- <div *repeatTimes="columns; index as i">
+  <div *repeatTimes="rows; index as j">
+    <div class="cell" [ngClass]="setCellType(i, j)">
+      <app-detail-cell [cellNum]="[i,j]"></app-detail-cell>
+    </div>
+  </div>
+</div> -->
+

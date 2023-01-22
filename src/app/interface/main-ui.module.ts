@@ -4,6 +4,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { FormsModule } from '@angular/forms';
 import { MainMenuComponent } from './main-menu/menu.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { MainMenuComponent } from './main-menu/menu.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
   ],
   exports: [
     NavigationComponent
